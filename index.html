@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2.0.4/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="overflow-x-hidden">
+
+    <header class="w-screen h-screen flex flex-col justify-center bg-gray-200 text-center bg-fixed bg-center bg-cover" style="background-image: url(./bg.jpg)">
+
+        <div id="fade" class="flex flex-col mx-auto">
+            <img class="h-12 w-12 mx-auto -mb-2 z-10 rounded-xl shadow" src="./sun.png" alt="">
+    
+            <h2 class="flex mx-auto w-4/5 md:w-auto text-center text-gray-700 text-2xl font-medium bg-white p-4 bg-opacity-60 hover:bg-opacity-80 filter rounded-lg">❝&nbsp<span id="quote">Si le chien aboie, c'est qu'il n'est pas assez cuit</span>&nbsp❞</h2>
+            
+            <div class="flex flex-col mx-auto mt-4">
+                <button onclick="newQuote()" class="bg-gradient-to-bl from-blue-500 to-blue-900 px-12 py-3 text-white text-sm font-medium rounded-sm hover:to-blue-800 shadow">Nouvelle Citation</button>
+            </div>
+        </div>
+
+    
+        <h3 class="absolute bottom-0 m-4 font-medium box-shadow">Crédit photo: <a href="https://magdeleine.co/photo-ryan-mcguire-n-5/">&nbspRyan McGuire</a></h3>
+    
+    </header>
+
+    <script>
+
+        let quotes = [
+        "Si tu tournes le dos au vent, tu auras le vent dans le dos",
+        "Si tu as mal au ventre, donne toi un coup a l'épaule, ainsi ta douleur se déplacera",
+        "S'il pleut alors, tu sera mouillé",
+        "Si tu ne dors pas alors tu seras fatigué",
+        "Il faut toujours avancer, car comme cela on ne recule pas",
+        "À la guerre il y a des gagnants et des perdants",
+        "Dis à ton armée d'avancer, si tu veux qu'elle avance",
+        " En etant 2 fois plus nombreux, vous aurez 2 fois plus de soldats.",
+        "Utilise la stratégie pour gagner",
+        "Une guerre gagnée vaut mieux qu'une bataille perdue",
+        "L'ennemi est sot ! Il pense que c'est moi l'ennemi alors que c'est lui !",
+        "La victoire est préférable à la défaite",
+        "Si il est ton ennemi alors ne le considère plus comme ton ami",
+        "Espionne l'ennemi, ainsi tu connaîtras ses agissements",
+        "Un sabre aiguisé coupe plus qu'un sabre émoussé",
+        "Celui qui a une carte sait où il va",
+        "Si tu veux encercler ton ennemi, mets tes troupes autour de lui",
+        "Si tu attaques ton ennemi par surprise... alors il sera surpris",
+        "Mieux vaut une bonne stratégie, qu'une mauvaise stratégie",
+        "Quand vos soldats ont faim, ils doivent manger ; quand ils ont soif, ils doivent s'abreuver ; quand ils sont fatigués, ils doivent se reposer",
+        "A vaincre sans péril on triomphe sans péril",
+        "Quand tu plonge dans la rivière, tu ressors tout mouillé",
+        "Attaque de nuit pour être moins visible",
+        "Le piment être comme autoroute, c'est à la sortie que tu paye",
+        "Si tu te réveilles, c'est que tu as dormi",
+        "Si le soleil se couche, c'est qu'il va faire nuit",
+        "C'est en observant son ennemi qu'on apprend à le connaître",
+        "Garde tes amis près de toi et tes ennemis loin de toi",
+        "Si tu as mal quelque part, c'est que tu es blessé",
+        "Quand il pleut, apprête toi a être mouillé",
+        ]
+        
+        function newQuote() {
+            let randomNumber = Math.floor(Math.random() * (quotes.length));
+            document.getElementById('quote').innerHTML = quotes[randomNumber];
+        }
+
+    </script>
+</body>
+
+</html>
+
